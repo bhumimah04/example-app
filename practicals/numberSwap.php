@@ -1,16 +1,15 @@
 <?php
-// Define two numbers
+function swapNumbers($a, $b) {
+    return [$b, $a];
+}
+
 $number1 = 5;
 $number2 = 10;
 
-echo "Before swapping: ";
-echo "Number 1 = " . $number1 . ", Number 2 = " . $number2 . "<br>";
+echo "Before swapping: Number 1 = $number1, Number 2 = $number2<br>";
 
-// Swap the numbers using a temporary variable
-$temp = $number1;
-$number1 = $number2;
-$number2 = $temp;
+list($number1, $number2) = swapNumbers($number1, $number2);
 
-echo "After swapping: ";
-echo "Number 1 = " . $number1 . ", Number 2 = " . $number2 . "<br>";
+echo "After swapping: Number 1 = $number1, Number 2 = $number2";
+
 ?>
