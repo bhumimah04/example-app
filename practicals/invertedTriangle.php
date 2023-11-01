@@ -1,11 +1,17 @@
 <?php
-$height = 5; // Change this to adjust the height of the inverted triangle
+$height = 5; // Change this value to set the height of the inverted triangle
 
-for ($i = $height; $i >= 1; $i--) {
-    for ($j = 1; $j <= $i; $j++) {
-        echo "* ";
+for ($row = $height; $row >= 1; $row--) {
+    // Print asterisks for the current row
+    for ($col = 1; $col <= $row; $col++) {
+        echo "*";
+        if ($col < $row) {
+            echo " ";
+        }
     }
-    echo "\n";
+    echo PHP_EOL; // Move to the next line
 }
 ?>
+
+
 
