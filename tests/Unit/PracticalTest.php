@@ -23,7 +23,7 @@ class PracticalTest extends TestCase
     public function testAddNumeric(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        Practical::add("abc,xyz");
+        \Practical::add("abc","xyz");
     }
 }
 
