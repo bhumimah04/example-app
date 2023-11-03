@@ -16,6 +16,15 @@ class PracticalTest extends TestCase
     {
         $this->assertEquals(\Practical::add(1,3), 4);
     }
+
+    /**
+     * A basic unit test example.
+     */
+    public function testAddNumeric(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        Practical::add("abc,xyz");
+    }
 }
 
 ?>

@@ -15,6 +15,10 @@ class Practical {
      * @return int The sum of $num1 and $num2.
      */
     public static function add($num1, $num2) {
+        if(!is_int($num1) || !is_int($num2))
+        {
+            throw new \InvalidArgumentException("Arguments must be integers");
+        }
         return $num1 + $num2;
     }
 
@@ -39,3 +43,5 @@ class Practical {
 }
 
 ?>
+
+
