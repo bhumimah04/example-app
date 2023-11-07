@@ -20,7 +20,7 @@ class PracticalTest extends TestCase
     /**
      * A basic unit test example.
      */
-    public function testAddNumeric(): void
+    public function testAddAlphabet(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         \Practical::add("abc","xyz");
@@ -40,6 +40,31 @@ class PracticalTest extends TestCase
     public function testAddFloatInteger(): void
     {
         $this->assertEquals(\Practical::add(1.5,2), 3.5);
+    }
+
+        /**
+     * A basic unit test example.
+     */
+    public function testAddStringInteger(): void
+    {
+        $this->assertIsInt(\Practical::add("2","3"), 5);
+    }
+
+        /**
+     * A basic unit test example.
+     */
+    public function testAddStringFloat(): void
+    {
+        $this->assertIsNumeric(\Practical::add("1.5","3.5"), 5);
+    }
+
+    /**
+     * A basic unit test example.
+     */
+    public function testAddAlphanumeric(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        \Practical::add("a1","2");
     }
 }
 
