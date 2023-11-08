@@ -66,6 +66,30 @@ class PracticalTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         \Practical::add("a1","2");
     }
+
+    public function testAcceptInteger(): void
+    {
+        $this->assertIsInt(\Practical::generateFibonacciSequence(4));
+    }
+
+    public function testRejectString(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->assertIsString(\Practical::generateFibonacciSequence("4"));
+    }
+
+    public function testRejectAlphabet(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        \Practical::generateFibonacciSequence("abc");
+    }
+
+    public function testRejectFloat(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->assertIsFloat(\Practical::generateFibonacciSequence("4.5"));
+    }
+
 }
 
 ?>

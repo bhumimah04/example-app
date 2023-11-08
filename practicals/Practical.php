@@ -28,6 +28,10 @@ class Practical {
      * @return array An array containing the first 'n' Fibonacci numbers.
      */
     public static function generateFibonacciSequence($n) {
+        if(!is_int($n))
+        {
+            throw new \InvalidArgumentException("Arguments must be Integer");
+        }
         $fibonacciSequence = array();
         if ($n >= 1) {
             $fibonacciSequence[] = 0;
