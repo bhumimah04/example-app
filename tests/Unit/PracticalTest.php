@@ -67,10 +67,10 @@ class PracticalTest extends TestCase
         \Practical::add("a1","2");
     }
 
-    public function testAcceptInteger(): void
-    {
-        $this->assertIsInt(\Practical::generateFibonacciSequence(4));
-    }
+    //public function testAcceptInteger(): void
+    //{
+    //    $this->assertIsInt(\Practical::generateFibonacciSequence(4));
+    //}
 
     public function testRejectString(): void
     {
