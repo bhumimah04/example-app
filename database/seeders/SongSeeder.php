@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use App\Models\Song;
 class SongSeeder extends Seeder
 {
     /**
@@ -23,7 +23,7 @@ class SongSeeder extends Seeder
             'title' => 'With You',
         ]);
     }
-    use App\Models\Song;
+    
 
     
 }

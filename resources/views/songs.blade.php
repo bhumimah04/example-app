@@ -3,7 +3,7 @@
     <body>
       <h2>Song - Blade Template</h2> 
       <table border=3>
-      <table>
+    
         <tr>
           <th>Title</th>
           <th>Artist</th>
