@@ -77,6 +77,13 @@ class Song {
      * @param int $tempo The tempo of the song.
      */
     public function setTempo($tempo) {
+        // Convert integer strings to integers
+        $tempo = is_numeric($tempo) ? (int) $tempo : $tempo;
+    
+        if (!is_int($tempo)) {
+            throw new \InvalidArgumentException('Tempo must be an integer or an integer string.');
+        }
+    
         $this->tempo = $tempo;
     }
 }
