@@ -1,6 +1,7 @@
 <?php
 
 namespace Tests\Unit;
+use InvalidArgumentException;
 
 use PHPUnit\Framework\TestCase;
 use Practicals\Song;

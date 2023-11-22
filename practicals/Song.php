@@ -80,7 +80,7 @@ class Song {
         // Convert integer strings to integers
         $tempo = is_numeric($tempo) ? (int) $tempo : $tempo;
     
-        if (!is_int($tempo)) {
+        if (!is_numeric($tempo) || floatval($tempo) != intval($tempo)) {
             throw new \InvalidArgumentException('Tempo must be an integer or an integer string.');
         }
     
