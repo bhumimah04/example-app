@@ -22,6 +22,7 @@ class SongSeeder extends Seeder
             'artist' => 'A P Dhillon',
             'title' => 'With You',
         ]);
+
     }
     
 
