@@ -24,7 +24,7 @@ Route::get('/veggies/{veggieName}', function (string $veggieName) {
 })->whereIn('veggieName', ['baigan', 'bhindi', 'aaloo','gobhi','Baigan', 'Bhindi',
                             'Aaloo','Gobhi']);
 
-Route::get('/songs_static', function () {
+/*Route::get('/songs_static', function () {
     $song1 = new Song();
     $song1->setTitle("Stan");
     $song1->setArtist("Eminem");
@@ -39,8 +39,13 @@ Route::get('/songs_static', function () {
   
     return view('songs', [ 'songs' => [ $song1, $song2, $song3 ] ]); 
 });
+*/
 
 Route::get('/songs', function () {
     return view('songs', [ 'songs' => Song::all() ] );
+});
+
+Route::get('/songs_static', function () {
+    return view('songs_static');
 });
 ?>
