@@ -5,59 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist Page</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            grid-gap: 20px;
-            padding: 20px;
-        }
-
-        aside {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-
-        section {
-            width: 100%;
-        }
-
-        section div {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin-bottom: 5px;
-        }
-
-        section div:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link href="{{ asset('css/layouts/main.css') }}" rel="stylesheet" />
 </head>
 
 <body>
